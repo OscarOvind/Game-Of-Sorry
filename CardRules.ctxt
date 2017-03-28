@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CardRules()
+comment1.params=
+comment1.target=piece\ choosePiece()
+comment1.text=\r\n\ --\ Jonathan\ takes\ care\ of\ it,\ I\ keep\ this\ here\ just\ in\ case\ --\r\n\ \r\n\ \r\n\ Need\ a\ currentPlayer\ in\ the\ Board\ class\r\n\ Each\ player\ class\ needs\ an\ array\ with\ ALL\ pieces\ (have\ a\ boolean\ if\ the\ piece\ is\ active)\r\n\ When\ a\ card\ is\ drawn,\ you\ have\ to\ choose\ from\ the\ array\ (onlt\ the\ active)\ of\ pieces\ for\ the\ currentPlayer\ and\ then\ the\ selected\ piece\ from\ that\ popup\ is\ referenced\ here\r\n
+comment2.params=p\ amt
+comment2.target=void\ Move(player,\ int)
+comment3.params=
+comment3.target=void\ Rule0()
+comment4.params=
+comment4.target=void\ Rule1()
+comment5.params=
+comment5.target=void\ Rule2()
+comment6.params=
+comment6.target=void\ Rule4()
+comment7.params=
+comment7.target=void\ Rule7()
+comment8.params=
+comment8.target=void\ Rule10()
+comment9.params=
+comment9.target=void\ Rule11()
+numComments=10

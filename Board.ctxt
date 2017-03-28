@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Board()
+comment1.params=page
+comment1.target=void\ paintComponent(java.awt.Graphics)
+comment2.params=
+comment2.target=void\ GetPlayerCard()
+comment3.params=
+comment3.target=void\ NewTurn()
+comment4.params=thePiece\ amt
+comment4.target=void\ Move(piece,\ int)
+comment4.text=\r\n\ This\ method\ takes\ the\ selected\ piece\ of\ the\ current\ player\ and\ figures\ out\ if\ the\ wanted\ location\ (current\ position\ +\ the\ moves\ from\ the\ drawn\ card),\r\n\ If\ the\ wanted\ tile\ location\ is\ free,\ then\ we\ move,\ if\ not\ we\ have\ to\ trigger\ the\ "bumb\ back"\ function\ /TODO\r\n\ Then\ we\ clear\ the\ current\ tile\ for\ the\ piece\ and\ assign\ the\ piece\ to\ the\ new\ tile\ (and\ update\ the\ graphics)\r\n
+numComments=5

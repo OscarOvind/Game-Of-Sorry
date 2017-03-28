@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=myValue
+comment0.target=Card(int)
+comment1.params=
+comment1.target=void\ SetEffect()
+comment10.params=
+comment10.target=int\ getValue()
+comment2.params=p
+comment2.target=void\ execute(player)
+comment3.params=p
+comment3.target=void\ execute(player)
+comment4.params=p
+comment4.target=void\ execute(player)
+comment5.params=p
+comment5.target=void\ execute(player)
+comment6.params=p
+comment6.target=void\ execute(player)
+comment7.params=g
+comment7.target=void\ paintComponent(java.awt.Graphics)
+comment7.text=\r\n\ The\ draw\ method\ for\ the\ card\r\n
+comment8.params=num
+comment8.target=void\ Set(int)
+comment9.params=
+comment9.target=int\ Draw()
+comment9.text=\r\n\ -----REMOVED\ AND\ ADDED\ TO\ THE\ DECK\ CLASS\ SO\ WE\ HAVE\ SENTRALIZED\ MANAGING\ FOR\ CARD\ ACTIONS-----\r\n\ -----\ DO\ NOT\ USE\ -----\r\n
+numComments=11

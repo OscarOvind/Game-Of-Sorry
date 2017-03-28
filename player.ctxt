@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=num\ homeArray
+comment0.target=player(int,\ tile[])
+comment1.params=page
+comment1.target=void\ draw(java.awt.Graphics)
+comment2.params=playerNumber
+comment2.target=void\ SetHome(int)
+numComments=3
