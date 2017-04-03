@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=player\ tileArray\ playerArray
-comment0.target=piece(int,\ tile[],\ java.lang.String)
+comment0.params=player\ startTile\ playerArray
+comment0.target=piece(int,\ tile,\ java.lang.String)
 comment1.params=g
 comment1.target=void\ draw(java.awt.Graphics)
 comment2.params=x
@@ -11,6 +11,8 @@ comment4.params=x
 comment4.target=void\ setlocationValue(int)
 comment5.params=
 comment5.target=int\ getlocationValue()
-comment6.params=spots
-comment6.target=int\ getNextSpot(int)
-numComments=7
+comment6.params=
+comment6.target=void\ printLocation()
+comment7.params=spots
+comment7.target=int\ getNextSpot(int)
+numComments=8

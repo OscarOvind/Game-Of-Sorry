@@ -16,32 +16,39 @@ public class piece {
     protected int locationValue = 0;
     public String ID = new String();
     public Integer intID;
+    public String myColor;
     // constructor
-    public piece(int player, tile[] tileArray, String playerArray) {
+    public piece(int player, tile startTile, String playerArray) {
         ID = playerArray;
         // sets the color
+        
         switch( player)   {
             case 0: 
             colour = Color.BLUE;
+            myColor = " BLUE ";
             locationValue = 4;
             break;
             case 1:
             colour = Color.GREEN;
+            myColor = " GREEN ";
             locationValue = 19;
             break;
             case 2: 
             colour = Color.RED;
+            myColor = " RED ";
             locationValue = 34;
             break;
             case 3:
             colour = Color.YELLOW;
+            myColor = " YELLOW ";
             locationValue = 49;
             break;
 
         }
-
-        xLocation = tileArray[locationValue].getX();
-        yLocation = tileArray[locationValue].getY();
+        //System.out.println("DEBUG: this x coor" + startTile.getX());
+        //System.out.println("DEBUG: this y coor" + startTile.getY());
+        xLocation = startTile.getX();
+        yLocation = startTile.getY();
     }
 
     // its draw method
@@ -74,6 +81,11 @@ public class piece {
         return locationValue;
     }
 
+    public void printLocation()
+    {
+        System.out.println("DEBUG: i am:" + myColor + "at (" + xLocation + ", " + yLocation + ")");
+    }
+    
     public int getNextSpot(int spots)
     {
         int newSpot = locationValue + spots;
