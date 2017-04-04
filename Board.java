@@ -14,6 +14,7 @@ public class Board extends JPanel {
 
     //instance fields
     tile[] tileArray = new tile[60];
+    
 
     tile[] blue = new tile [4];
     tile[] green = new tile [4];
@@ -71,20 +72,32 @@ public class Board extends JPanel {
         colour = 1;
         x = 4;
         y= 2;
-        for(int i = 0; i <= 1; i++) {
+        blue[0]= new tile(x, y,colour);
+        blue[1]= new tile(x+1, y,colour);
+        blue[2]= new tile(x, y+1,colour);
+        blue[3]= new tile(x+1, y+1,colour);
+        /*(for(int i = 0; i <= 1; i++) {
             blue[i]= new tile(x, y,colour);
+            System.out.println("DEBUG: bluehome[" + i +"] is: " + blue[i].getX() + ", " + blue[i].getY());
             x++;
         }
         x=4;
         y++;
         for(int i = 2; i <= 3; i++) {
             blue[i]= new tile(x, y,colour);
+            System.out.println("DEBUG: bluehome[" + i +"] is: " + blue[i].getX() + ", " + blue[i].getY());
             x++;
         }
+        */
         //print green base
         colour=2;
         x=12;
         y=4;
+        green[0]= new tile(x, y,colour);
+        green[1]= new tile(x+1, y,colour);
+        green[2]= new tile(x, y+1,colour);
+        green[3]= new tile(x+1, y+1,colour);
+        /*
         for(int i = 0; i <= 1; i++) {
             green[i]= new tile(x, y,colour);
             x++;
@@ -95,10 +108,16 @@ public class Board extends JPanel {
             green[i]= new tile(x, y,colour);
             x++;
         }
+        */
         //print red base
         colour=3;
         x = 10;
         y= 12;
+        red[0]= new tile(x, y,colour);
+        red[1]= new tile(x+1, y,colour);
+        red[2]= new tile(x, y+1,colour);
+        red[3]= new tile(x+1, y+1,colour);
+        /*
         for(int i = 0; i <= 1; i++) {
             red[i]= new tile(x, y,colour);
             x++;
@@ -109,10 +128,16 @@ public class Board extends JPanel {
             red[i]= new tile(x, y,colour);
             x++;
         }
+        */
         //print yellow base
         colour=4;
         x=2;
         y=10;
+        yellow[0]= new tile(x, y,colour);
+        yellow[1]= new tile(x+1, y,colour);
+        yellow[2]= new tile(x, y+1,colour);
+        yellow[3]= new tile(x+1, y+1,colour);
+        /*
         for(int i = 0; i <= 1; i++) {
             yellow[i]= new tile(x, y,colour);
             x++;
@@ -123,7 +148,8 @@ public class Board extends JPanel {
             yellow[i]= new tile(x, y,colour);
             x++;
         }
-
+        */
+       
         //Print safe zone
         //blue
         x=2;
@@ -158,10 +184,25 @@ public class Board extends JPanel {
             x++;
         }
 
-        for(int i = 0; i < players.length; i++) {
-            players[i] = new player(i, tileArray);
+        //for(int i = 0; i < players.length; i++) {
+        //    players[i] = new player(i, tileArray);
+        //}
+        
+        int tempNumOfPlayers = 4;
+        switch (tempNumOfPlayers)
+        {
+            case 4:
+                players[tempNumOfPlayers-1] = new player(tempNumOfPlayers-1, yellow);
+            case 3:
+                 players[tempNumOfPlayers-2] = new player(tempNumOfPlayers-2, red);
+            case 2:
+                players[tempNumOfPlayers-3] = new player(tempNumOfPlayers-3, green);
+            case 1:
+                 players[tempNumOfPlayers-4] = new player(tempNumOfPlayers-4, blue);
         }
-
+        
+        
+        
         bluePiece = players[0].pieces[0];
         pieceArray[BLUE_PLAYER] = bluePiece;
 
@@ -173,7 +214,7 @@ public class Board extends JPanel {
 
         yellowPiece = players[3].pieces[0];
         pieceArray[YELLOW_PLAYER] = yellowPiece;
-
+        
         deck = new Deck();
         Dimension size = deck.getPreferredSize();
         deck.setBounds(180, 180, size.width, size.height);
@@ -222,10 +263,16 @@ public class Board extends JPanel {
         for(int i = 0; i <= yellowSafe.length-1; i++) {
             yellowSafe[i].draw(page);
         } 
+        for (int player = 0; player < players.length; player++)
+        {
+            players[player].draw(page);
+        }
+        /*
         bluePiece.draw(page);
         greenPiece.draw(page);
         redPiece.draw(page);
         yellowPiece.draw(page);
+        */
     }
 
     /*

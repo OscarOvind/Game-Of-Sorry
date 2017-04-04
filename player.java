@@ -17,9 +17,13 @@ public class player {
 
     public player (int num, tile[] homeArray ) {
         teamID = num;
+        home = homeArray;
         for(int i = 0; i < 4; i++) {
-            pieces[i] = new piece(num, homeArray, (i+=1)+"");
+            pieces[i] = new piece(num, homeArray[i], (i+1)+"");
+            pieces[i].printLocation();
+            //System.out.println("DEBUG: pieces created " + i);
         }
+        
         SetHome(num);
     }
 
@@ -29,8 +33,9 @@ public class player {
         }
     }
     
-    void SetHome(int playerNumber) {
-        switch( playerNumber) {
+    void SetHome(int playerNumber) 
+    {
+         switch( playerNumber) {
             case 0: 
             //home = Board._instance.blueHome;
             safe = Board._instance.blueSafe;
@@ -57,4 +62,34 @@ public class player {
             break;
         }
     }
+        
+    
+    /*
+     * switch( playerNumber) {
+            case 0: 
+            //home = Board._instance.blueHome;
+            safe = Board._instance.blueSafe;
+            startingTile = 4;
+            endTile = startingTile - 2;
+            break;
+            case 1:
+            //home = Board._instance.greenHome;
+            safe = Board._instance.greenSafe;
+            endTile = startingTile - 2;
+            startingTile = 19;
+            break;
+            case 2: 
+            //home = Board._instance.redHome;
+            safe = Board._instance.redSafe;
+            endTile = startingTile - 2;
+            startingTile = 34;
+            break;
+            case 3:
+            //home = Board._instance.yellowHome;
+            safe = Board._instance.yellowSafe;
+            endTile = startingTile - 2;
+            startingTile = 49;
+            break;
+        }
+     */
 }
