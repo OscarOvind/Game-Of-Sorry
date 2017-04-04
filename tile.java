@@ -25,6 +25,7 @@ public class tile// class for makeing a tile
     {
         upperX = x * 30;
         upperY = y * 30;
+       
     }
     public tile (int x , int y, int c)
     {
@@ -50,10 +51,12 @@ public class tile// class for makeing a tile
     //returns the x coodinate of the tle for use with the tile
     public int getX()
     {
+        //System.out.println("DEBUG: blue home x value: " + upperX);
         return upperX;
     }
     public int getY()
     {
+        //System.out.println("DEBUG: blue home y value: " + upperY);
         return upperY;
     }
     //draw method
